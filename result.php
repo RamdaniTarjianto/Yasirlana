@@ -161,7 +161,7 @@ if (isset($_GET['submit'])) {
 <div class="container">
     <div class="input-group pagination">
         <div class="input-group-btn">
-    <?php
+        <?php
         $totalPages = $totalResult/10;
         $totalPages = ceil($totalPages);
             if(($queries['page']+1) * 10 >= $totalResult){

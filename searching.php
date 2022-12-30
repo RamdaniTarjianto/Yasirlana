@@ -66,7 +66,7 @@ set_time_limit(10000);
             <div class="row d-flex justify-content-center">
                 <div class="col-md-9">
                     <form action="" method="get" id="form1">
-                    <input type="hidden" name="page" value="1">
+                        <input type="hidden" name="page" value="1">
                         <div class="p-4 mt-3">
                             <h3 class="heading mt-5 text-center">Hi! Search Data in Here</h3>
                             <div class="d-flex justify-content-center px-4">
@@ -149,28 +149,48 @@ set_time_limit(10000);
 
                             </div>
                         </div>
-                        <!-- </form> -->
-                    </div>
+                    <!-- </form> -->
                 </div>
+            </div>
 
-                <!--Result -->
-                <div class="result mt-5 mb-5 ml-4">
-                    <?php
+            <!--Result -->
+            <div class="result mt-5 mb-5 ml-4">
+                <?php
             $key = $_GET['research_name'];
             $keyword = preg_replace('/\s+/', '+', $key);
             ?>
-                    <div class="heading-result mb-3">Results found for :
-                        <small class="text-success heading-result">
-                            <?php echo $key ?></small>
-                        <!-- <form action="" method="post" id="form1"> -->
-                        <button
-                            name="export"
-                            id="export"
-                            class="btn btn-success float-right"
-                            onclick="submitForm('excel.php')">
-                            <i class="fa fa-file"></i>
-                            Export Data</button>
-                    </form>
+                <div class="heading-result mb-3">Results found for :
+                    <small class="text-success heading-result">
+                        <?php echo $key ?></small>
+
+                </div>
+                <div class="mb-3">
+                    <medium class="text-dark">
+                        <?php echo "Database: " . $_GET['databases'][0] . " || Publication Year: " . $_GET['startDate'] . "-" . $_GET['finishDate'] . " || " . "Model: ". $_GET['model']?></medium>
+                
+                <!-- <form action="" method="get" id="formExp"> -->
+
+                    <!-- <div class="dropdown show"> -->
+                    <!-- <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false"> Export Option </a> -->
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="#">Export This Page</a>
+                        <a class="dropdown-item" href="#">Export All Pages</a>
+                    </div>
+                    <!-- </div> -->
+                    <button
+                        name="export"
+                        id="dropdownMenuLink"
+                        class="btn btn-success float-right dropdown-toggle"
+                        onclick="submitForm('excel.php')"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fa fa-file"></i>
+                        Export Data</button>
+                </form>
                 </div>
                 <div class="card p-3 d-flex flex-column">
                     <div class="loading mt-3 mb-3 d-none">

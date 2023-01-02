@@ -18,6 +18,8 @@ float rand_float(int max) {
 	return ((float)rand() / (float)(RAND_MAX)) * max;
 }
 
+asdasd
+
 
 
 

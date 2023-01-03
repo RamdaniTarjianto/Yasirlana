@@ -11,8 +11,8 @@
             // $data = json_decode($url, true);
         
 	}
-    // header("Content-type: application/vnd-ms-excel");
-    // header("Content-Disposition: attachment; filename=hasil.xls");
+    header("Content-type: application/vnd-ms-excel");
+    header("Content-Disposition: attachment; filename=hasil.xls");
 
 ?>
 

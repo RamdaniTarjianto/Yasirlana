@@ -53,35 +53,37 @@
                 // echo $databases."<br />";
                 switch($databases){
                     case 'IEEE':
-                        if(!isset($startDate) || trim($startDate) == ''){
-                            $query = "http://ieeexploreapi.ieee.org/api/v1/search/articles?apikey=3xh9mgk6qu554d23taxmmn47&format=json&max_records=300&sort_order=asc&sort_field=publication_title&abstract=$keyword";
-                        }else{
-                            $query = "http://ieeexploreapi.ieee.org/api/v1/search/articles?apikey=3xh9mgk6qu554d23taxmmn47&format=json&max_records=300&sort_order=asc&sort_field=publication_title&abstract=$keyword&start_year=$startDate&end_year=$finishDate";
-                        }									
+                        $query = "http://ieeexploreapi.ieee.org/api/v1/search/articles?apikey=3xh9mgk6qu554d23taxmmn47&format=json&max_records=$max_records&start_record=$start_record&sort_order=asc&sort_field=publication_title&abstract=$keyword&start_year=$startDate&end_year=$finishDate";										
                         $url = file_get_contents($query);
                         $data = json_decode($url, true);
                         $data["data"] = $data['articles'];
                         $temp_url = 'pdf_url';
                         $size = sizeof($data['data']);
-						$temp_year = 'publication_year';
+                        $temp_year = 'publication_year';
+                        $totalResult = $data["total_records"];
                     break;
                     case 'Semantic Scholar':
-                        if(!isset($startDate) || trim($startDate) == ''){
-                            $query = "https://api.semanticscholar.org/graph/v1/paper/search?query=$keyword&limit=100&fields=title,authors,abstract,url,year";
-                        }else{
-                            $query = "https://api.semanticscholar.org/graph/v1/paper/search?query=$keyword&limit=100&fields=title,authors,abstract,url,year&year=$startDate-$finishDate";
-                        }
+                        $query = "https://api.semanticscholar.org/graph/v1/paper/search?query=$keyword&limit=$limit&offset=$offset&fields=title,authors,abstract,url,year&year=$startDate-$finishDate";
                         $url = file_get_contents($query);
                         $data = json_decode($url, true);
                         $temp_url = 'url';
                         $size = sizeof($data['data']);
-						$temp_year = 'year';
+                        $temp_year = 'year';
+                        $totalResult = $data["total"];
                     break;
                     case "EPC":
-                        $query = "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=$keyword&resultType=core&pageSize=1000&format=json";
+                        if($queries['page'] >= 2){
+                            $cursorMark = $queries['NextCursorMark'];
+                            $query = "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=$keyword&resultType=core&cursorMark=$cursorMark&pageSize=10&format=json";
+                        }else{
+                            $cursorMark = "*";
+                            $query = "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=$keyword&resultType=core&cursorMark=$cursorMark&pageSize=10&format=json";
+                        }
                         $url = file_get_contents($query);
                         $data = json_decode($url, true);
+                        $cursorMark = $data["nextCursorMark"];
                         $size = sizeof($data["resultList"]["result"]);
+                        $totalResult = $data["hitCount"];
                     break;
                 }
 

@@ -176,8 +176,8 @@ set_time_limit(10000);
                     aria-expanded="false"> Export Option </a> -->
 
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Export This Page</a>
-                        <a class="dropdown-item" href="#">Export All Pages</a>
+                        <a class="dropdown-item" href="excelPage.php?<?php echo http_build_query($_GET); ?>">Export This Page</a>
+                        <a class="dropdown-item" href="excel.php?<?php echo http_build_query($_GET); ?>">Export All Pages</a>
                     </div>
                     <!-- </div> -->
                     <button

@@ -66,8 +66,10 @@ if (isset($_GET['submit'])) {
                 $totalResult = $data["total"];
             break;
             case "EPC":
-                if($queries['page'] >= 2){
+                if($queries['page'] > 1){
                     $cursorMark = $queries['NextCursorMark'];
+                    $cursorMark = preg_replace('/\s+/', '+', $cursorMark);
+                    // echo $cursorMark;
                     $query = "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=$keyword&resultType=core&cursorMark=$cursorMark&pageSize=10&format=json";
                 }else{
                     $cursorMark = "*";

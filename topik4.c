@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-rasdasdasd
 #include <stdlib.h>
 #include <unistd.h>
 #include <math.h>

@@ -92,8 +92,8 @@ set_time_limit(10000);
                                             name="databases[]"
                                             data-placeholder="Database"
                                             id="databaseform">
-                                            <option value="Semantic Scholar">Semantic Scholar</option>
                                             <option value="IEEE">IEEE</option>
+                                            <option value="Semantic Scholar">Semantic Scholar</option>
                                             <option value="EPC">Europe PubMed Central</option>
                                         </select>
                                     </div>

@@ -116,7 +116,7 @@ set_time_limit(10000);
                                                 name="finishDate"
                                                 id="finishDate"
                                                 required="required">
-                                            <input type="submit" class="btn btn-success ml-4" name="submit" id="btnCari" value="Cari">
+                                            <input type="submit" class="btn btn-success ml-4 searchButton" name="submit" id="btnCari" value="Cari">
                                         </div>
 
                                     </div>

@@ -123,17 +123,19 @@ set_time_limit(10000);
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Select Result</label>
-                                        <select
-                                            class="form-control select2"
-                                            multiple="multiple"
-                                            name="result[]"
-                                            data-placeholder="Result"
-                                            id="resultform">
-                                            <option value="Included">Included</option>
-                                            <option value="Excluded">Excluded</option>
-                                        </select>
+                                        <div class="btn-group" data-toggle="buttons" id="resultform">
+                                            <label class="btn btn-light">
+                                                <input type="checkbox" id="included" name="result[]" value="Included" autocomplete="off">
+                                                Included
+                                            </label>
+                                            <label class="btn btn-light">
+                                                <input type="checkbox" id="excluded" name="result[]" value="Excluded" autocomplete="off">
+                                                Excluded
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
+
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Select Model</label>
@@ -149,48 +151,52 @@ set_time_limit(10000);
 
                             </div>
                         </div>
-                    <!-- </form> -->
+                        <!-- </form> -->
+                    </div>
                 </div>
-            </div>
 
-            <!--Result -->
-            <div class="result mt-5 mb-5 ml-4">
-                <?php
+                <!--Result -->
+                <div class="result mt-5 mb-5 ml-4">
+                    <?php
             $key = $_GET['research_name'];
             $keyword = preg_replace('/\s+/', '+', $key);
             ?>
-                <div class="heading-result mb-3">Results found for :
-                    <small class="text-success heading-result">
-                        <?php echo $key ?></small>
+                    <div class="heading-result mb-3">Results found for :
+                        <small class="text-success heading-result">
+                            <?php echo $key ?></small>
 
-                </div>
-                <div class="mb-3">
-                    <medium class="text-dark">
-                        <?php echo "Database: " . $_GET['databases'][0] . " || Publication Year: " . $_GET['startDate'] . "-" . $_GET['finishDate'] . " || " . "Model: ". $_GET['model']?></medium>
-                
-                <!-- <form action="" method="get" id="formExp"> -->
-
-                    <!-- <div class="dropdown show"> -->
-                    <!-- <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                    id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false"> Export Option </a> -->
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="excelPage.php?<?php echo http_build_query($_GET); ?>">Export This Page</a>
-                        <a class="dropdown-item" href="excel.php?<?php echo http_build_query($_GET); ?>">Export All Pages</a>
                     </div>
-                    <!-- </div> -->
-                    <button
-                        name="export"
-                        id="dropdownMenuLink"
-                        class="btn btn-success float-right dropdown-toggle"
-                        onclick="submitForm('excel.php')"
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false">
-                        <i class="fa fa-file"></i>
-                        Export Data</button>
-                </form>
+                    <div class="mb-3">
+                        <medium class="text-dark">
+                            <?php echo "Database: " . $_GET['databases'][0] . " || Publication Year: " . $_GET['startDate'] . "-" . $_GET['finishDate'] . " || " . "Model: ". $_GET['model']?></medium>
+
+                        <!-- <form action="" method="get" id="formExp"> -->
+
+                        <!-- <div class="dropdown show"> -->
+                        <!-- <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
+                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false"> Export Option </a> -->
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a
+                                class="dropdown-item"
+                                href="excelPage.php?<?php echo http_build_query($_GET); ?>">Export This Page</a>
+                            <a
+                                class="dropdown-item"
+                                href="excel.php?<?php echo http_build_query($_GET); ?>">Export All Pages</a>
+                        </div>
+                        <!-- </div> -->
+                        <button
+                            name="export"
+                            id="dropdownMenuLink"
+                            class="btn btn-success float-right dropdown-toggle"
+                            onclick="submitForm('excel.php')"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="fa fa-file"></i>
+                            Export Data</button>
+                    </form>
                 </div>
                 <div class="card p-3 d-flex flex-column">
                     <div class="loading mt-3 mb-3 d-none">
@@ -248,6 +254,12 @@ set_time_limit(10000);
                     var result = document
                         .getElementById('resultform')
                         .value;
+                    var included = document
+                        .getElementById('included')
+                        .checked;
+                    var excluded = document
+                        .getElementById('excluded')
+                        .checked;
 
                     var startDate = document
                         .getElementById('startDate')
@@ -268,6 +280,11 @@ set_time_limit(10000);
                     }
 
                     if (result === '') {
+                        $("#alertDanger").removeClass("d-none");
+                        return false;
+                    }
+
+                    if (!included && !excluded) {
                         $("#alertDanger").removeClass("d-none");
                         return false;
                     }

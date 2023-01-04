@@ -78,9 +78,9 @@ set_time_limit(10000);
                                         placeholder="Type Keyword ..."
                                         name="research_name">
 
-                                    <button type="submit" class="search-icon btn searchButton" name="submit">
+                                    <!-- <button type="submit" class="search-icon btn searchButton" name="submit">
                                         <i class="fa fa-search"></i>
-                                    </button>
+                                    </button> -->
                                 </div>
                             </div>
                             <div class="row mt-4 g-1 px-4 mb-5">
@@ -116,6 +116,7 @@ set_time_limit(10000);
                                                 name="finishDate"
                                                 id="finishDate"
                                                 required="required">
+                                            <input type="submit" class="btn btn-success ml-4" name="submit" id="btnCari" value="Cari">
                                         </div>
 
                                     </div>
@@ -124,11 +125,11 @@ set_time_limit(10000);
                                     <div class="form-group">
                                         <label>Select Result</label>
                                         <div class="btn-group" data-toggle="buttons" id="resultform">
-                                            <label class="btn btn-light">
+                                            <label class="btn btn-light" style="background-color: white;">
                                                 <input type="checkbox" id="included" name="result[]" value="Included" autocomplete="off">
                                                 Included
                                             </label>
-                                            <label class="btn btn-light">
+                                            <label class="btn btn-light" style="background-color: white;">
                                                 <input type="checkbox" id="excluded" name="result[]" value="Excluded" autocomplete="off">
                                                 Excluded
                                             </label>

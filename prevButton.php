@@ -24,6 +24,7 @@ href="javascript:history.go(-1)">Previous</a></li> -->
 <div class="input-group-btn">
 <form name="form2" id="form2">
     <input
+        type="number"
         class="form-control page-item"
         name="halaman"
         id="halaman"

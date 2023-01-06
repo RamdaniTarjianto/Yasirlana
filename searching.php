@@ -184,7 +184,7 @@ set_time_limit(10000);
                             <a
                                 class="dropdown-item"
                                 href="excelPage.php?<?php echo http_build_query($_GET); ?>">Export This Page</a>
-                            <a class="dropdown-item" href="excel.php?<?php echo http_build_query($_GET); ?>">Export All Pages <i class="fas" title="Export hanya mampu sebanyak 300 data">(i)</i></a>
+                            <a class="dropdown-item" href="excel.php?<?php echo http_build_query($_GET); ?>">Export All Pages <i class="fas" title="Anda akan melakukan export kedalam bentuk excel sebanyak 300 data pertama.">(i)</i></a>
                         </div>
                         <!-- </div> -->
                         <button

@@ -243,9 +243,125 @@
                     <div class="team-active">
 
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-team mb-30 text-center card">
+                            <div class="single-team mb-30 text-center">
+                                <div class="team-img">
+                                    <img src="assets/img/gallery/dr_rita.png" alt="">
+                                    <div class="team-caption">
+
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-info">
+                                    <h3><a href="#">drg. Chaerita Maulani, Sp.Perio</a></h3>
+                                    <p>RSGM YARSI</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-team mb-30 text-center">
+                                <div class="team-img">
+                                    <img src="assets/img/gallery/team1.png" alt="">
+                                    <div class="team-caption">
+
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-info">
+                                    <h3><a href="#">drg. Liana Zulfa, Sp.Perio., MARS.</a></h3>
+                                    <p>RSGM YARSIr</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-team mb-30 text-center">
+                                <div class="team-img">
+                                    <img src="assets/img/gallery/team1.png" alt="">
+                                    <div class="team-caption">
+
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-info">
+                                    <h3><a href="#">drg. Dharma Satya Aprianto, Sp.Pros</a></h3>
+                                    <p>RSGM YARSI</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-team mb-30 text-center">
                                 <div class="team-img">
                                     <img src="assets/img/gallery/team2.png" alt="">
+                                    <div class="team-caption">
+
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-info">
+                                    <h3><a href="#">Chandra Prasetyo Utomo, S.Kom., M.Sc.</a></h3>
+                                    <p>FTI YARSI</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-team mb-30 text-center">
+                                <div class="team-img">
+                                    <img src="assets/img/gallery/team2.png" alt="">
+                                    <div class="team-caption">
+
+                                        <div class="team-social">
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                                <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="team-info">
+                                    <h3><a href="#">Muhammad Fathurachman, S.Kom, M.Kom.</a></h3>
+                                    <p>FTI YARSI</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-team mb-30 text-center">
+                                <div class="team-img">
+                                    <img src="assets/img/gallery/Yasin.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -266,9 +382,9 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-team mb-30 text-center card">
+                            <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/team3.png" alt="">
+                                    <img src="assets/img/gallery/april.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -283,14 +399,15 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">Aprillia Nur Azizah</a></h3>
-                                    <p>CEO</p>
+                                    <p>Cloud Engineer</p>
                                 </div>
                             </div>
                         </div>
+
                         <div class="col-lg- col-md-4 col-sm-6">
-                            <div class="single-team mb-30 text-center card">
+                            <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/team2.png" alt="">
+                                    <img src="assets/img/gallery/dani-1.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -310,7 +427,7 @@
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-team mb-30 text-center card">
+                            <div class="single-team mb-30 text-center">
                                 <div class="team-img">
                                     <img src="assets/img/gallery/team3.png" alt="">
                                     <div class="team-caption">
@@ -333,7 +450,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-team mb-30 text-center card">
+                            <div class="single-team mb-30 text-center">
                                 <div class="team-img">
                                     <img src="assets/img/gallery/team3.png" alt="">
                                     <div class="team-caption">
@@ -356,7 +473,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-4 col-sm-6">
-                            <div class="single-team mb-30 text-center card">
+                            <div class="single-team mb-30 text-center">
                                 <div class="team-img">
                                     <img src="assets/img/gallery/team3.png" alt="">
                                     <div class="team-caption">
@@ -401,7 +518,7 @@
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
-                                        <p>YASIRLANA is an automation system that can be used to assist the process of screening articles or journals in the Systematic Literature Review(SLR).</p>
+                                        <p>YASIRLANA is an automation system that can be used to assist the process of screening articles or journals in the Systematic Literature Review.</p>
                                     </div>
                                 </div>
 
@@ -435,7 +552,6 @@
                             <div class="footer-tittle">
                                 <h4>About Us</h4>
                                 <ul>
-                                    <li><a href="#">Our Partner</a></li>
                                     <li><a href="#">Universitas YARSI</a></li>
                                     <li><a href="#">Fakultas Teknologi Informasi Universitas YARSI</a></li>
                                     <li><a href="#">Fakultas Kedokteran Gigi Universitas YARSI</a></li>

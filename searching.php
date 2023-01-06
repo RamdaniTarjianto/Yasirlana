@@ -39,6 +39,7 @@ set_time_limit(10000);
             rel="stylesheet"
             type="text/css"
             href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+
         <script
             src="https://code.jquery.com/jquery-3.6.1.min.js"
             integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
@@ -47,6 +48,7 @@ set_time_limit(10000);
             type="text/javascript"
             charset="utf8"
             src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+
     </head>
 
     <body>
@@ -182,16 +184,12 @@ set_time_limit(10000);
                             <a
                                 class="dropdown-item"
                                 href="excelPage.php?<?php echo http_build_query($_GET); ?>">Export This Page</a>
-                            <a
-                                class="dropdown-item"
-                                href="excel.php?<?php echo http_build_query($_GET); ?>">Export All Pages</a>
+                            <a class="dropdown-item" href="excel.php?<?php echo http_build_query($_GET); ?>">Export All Pages <i class="fas" title="Export hanya mampu sebanyak 300 data">(i)</i></a>
                         </div>
                         <!-- </div> -->
                         <button
-                            name="export"
                             id="dropdownMenuLink"
                             class="btn btn-success float-right dropdown-toggle"
-                            onclick="submitForm('excel.php')"
                             data-toggle="dropdown"
                             aria-haspopup="true"
                             aria-expanded="false">

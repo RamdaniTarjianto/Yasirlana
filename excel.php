@@ -43,6 +43,7 @@
             $offset = ($page - 1) * $limit;
             $start_record = $offset;
             $keyword = $_GET['research_name'];
+            $keyword = preg_replace('/\s+/', '+', $keyword);
             $databases = $_GET['databases'][0];
             $result = $_GET['result'];
             $model = $_GET['model'];

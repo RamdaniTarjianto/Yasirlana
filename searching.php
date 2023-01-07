@@ -179,19 +179,21 @@ set_time_limit(10000);
                             $notif = "ab";
                             $databases = $_GET['databases'][0];
                             if($databases == 'IEEE'){
-                                $notif = "Anda akan melakukan export kedalam bentuk excel sebanyak 300 data pertama.";
+                                $notif = "Anda hanya dapat melakukan export kedalam bentuk excel sebanyak 300 data pertama.";
                             }else if($databases == 'Semantic Scholar'){
-                                $notif = "Anda akan melakukan export kedalam bentuk excel sebanyak 100 data pertama.";
+                                $notif = "Anda hanya dapat melakukan export kedalam bentuk excel sebanyak 100 data pertama.";
                             }else{
-                                $notif = "Anda akan melakukan export kedalam bentuk excel sebanyak 1000 data pertama.";
+                                $notif = "Anda hanya dapat melakukan export kedalam bentuk excel sebanyak 1000 data pertama.";
                             }
                         ?>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a
                                 class="dropdown-item"
-                                href="excelPage.php?<?php echo http_build_query($_GET); ?>">Export This Page</a>
-                            <a class="dropdown-item" href="excel.php?<?php echo http_build_query($_GET); ?>">Export All Pages <i class="fas" title="<?php echo $notif; ?>">(i)</i></a>
+                                href="excelPage.php?<?php echo http_build_query($_GET); ?>"
+                                onclick="return confirm('Apakah Anda yakin ingin mengekspor halaman ini?')">Export This Page</a>
+                            <a class="dropdown-item" href="excel.php?<?php echo http_build_query($_GET); ?>"
+                            onclick="return confirm('<?php echo $notif; ?> Ingin melanjutkan export?')">Export All Pages <i class="fas" title="<?php echo $notif; ?>">(i)</i></a>
                         </div>
                         <!-- </div> -->
                         <button

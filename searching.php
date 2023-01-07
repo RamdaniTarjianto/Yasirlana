@@ -64,6 +64,7 @@ set_time_limit(10000);
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            
             <!--  -->
             <!--search -->
             <div class="row d-flex justify-content-center">
@@ -291,6 +292,18 @@ set_time_limit(10000);
 
                     if (!included && !excluded) {
                         $("#alertDanger").removeClass("d-none");
+                        return false;
+                    }
+
+                    if (isNaN(startDate) || startDate.length != 4) {
+                        $("#alertDanger").removeClass("d-none");
+                        $("#alertDanger").text("Input tahun harus merupakan angka dan terdiri dari 4 karakter!");
+                        return false;
+                    }
+                    
+                    if (isNaN(finishDate) || finishDate.length != 4) {
+                        $("#alertDanger").removeClass("d-none");
+                        $("#alertDanger").text("Input tahun harus merupakan angka dan terdiri dari 4 karakter!");
                         return false;
                     }
 

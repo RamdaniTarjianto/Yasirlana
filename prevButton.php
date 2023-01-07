@@ -28,7 +28,8 @@ href="javascript:history.go(-1)">Previous</a></li> -->
         class="form-control page-item"
         name="halaman"
         id="halaman"
-        style="width: 50px;"
+        min="1"
+        style="width: 100px;"
         value="<?= $_GET['page'] ?>"/>
 
 </div>

@@ -64,6 +64,7 @@ set_time_limit(10000);
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <!--  -->
             <!--search -->
             <div class="row d-flex justify-content-center">
                 <div class="col-md-9">
@@ -173,18 +174,23 @@ set_time_limit(10000);
                         <medium class="text-dark">
                             <?php echo "Database: " . $_GET['databases'][0] . " || Publication Year: " . $_GET['startDate'] . "-" . $_GET['finishDate'] . " || " . "Model: ". $_GET['model']?></medium>
 
-                        <!-- <form action="" method="get" id="formExp"> -->
-
-                        <!-- <div class="dropdown show"> -->
-                        <!-- <a class="btn btn-secondary dropdown-toggle" href="#" role="button"
-                        id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false"> Export Option </a> -->
+                        <?php 
+                            $notif = "ab";
+                            $databases = $_GET['databases'][0];
+                            if($databases == 'IEEE'){
+                                $notif = "Anda akan melakukan export kedalam bentuk excel sebanyak 300 data pertama.";
+                            }else if($databases == 'Semantic Scholar'){
+                                $notif = "Anda akan melakukan export kedalam bentuk excel sebanyak 100 data pertama.";
+                            }else{
+                                $notif = "Anda akan melakukan export kedalam bentuk excel sebanyak 1000 data pertama.";
+                            }
+                        ?>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a
                                 class="dropdown-item"
                                 href="excelPage.php?<?php echo http_build_query($_GET); ?>">Export This Page</a>
-                            <a class="dropdown-item" href="excel.php?<?php echo http_build_query($_GET); ?>">Export All Pages <i class="fas" title="Anda akan melakukan export kedalam bentuk excel sebanyak 300 data pertama.">(i)</i></a>
+                            <a class="dropdown-item" href="excel.php?<?php echo http_build_query($_GET); ?>">Export All Pages <i class="fas" title="<?php echo $notif; ?>">(i)</i></a>
                         </div>
                         <!-- </div> -->
                         <button

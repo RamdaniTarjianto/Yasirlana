@@ -86,13 +86,13 @@ if (isset($_GET['submit'])) {
 
         // Show Result
         if($queries['page'] >= 2){
-            if(($queries['page']+1) * 10 >= $totalResult){
+            if(($queries['page']) * 10 >= $totalResult){
                 echo "Show " . ($limit+($totalResult-$limit)) . " from " . number_format($totalResult);
             }else{
                 echo "Show " . $limit*($queries['page']) . " from " . number_format($totalResult);
             }
         }else{
-            if(($queries['page']+1) * 10 >= $totalResult){
+            if(($queries['page']) * 10 >= $totalResult){
                 echo "Show " . ($limit+($totalResult-$limit)) . " from " . number_format($totalResult);
             }else{
                 echo "Show " . $limit*($queries['page']) . " from " . number_format($totalResult);
@@ -166,7 +166,7 @@ if (isset($_GET['submit'])) {
         <?php
         $totalPages = $totalResult/10;
         $totalPages = ceil($totalPages);
-            if(($queries['page']+1) * 10 >= $totalResult){
+            if(($queries['page']) * 10 >= $totalResult){
                 include "prevButton.php";
             }else{
                 include "prevButton.php";

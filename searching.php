@@ -295,13 +295,13 @@ set_time_limit(10000);
                         return false;
                     }
 
-                    if (isNaN(startDate) || startDate.length != 4) {
+                    if (isNaN(startDate) || startDate.length != 4 || startDate <= 0) {
                         $("#alertDanger").removeClass("d-none");
                         $("#alertDanger").text("Input tahun harus merupakan angka dan terdiri dari 4 karakter!");
                         return false;
                     }
                     
-                    if (isNaN(finishDate) || finishDate.length != 4) {
+                    if (isNaN(finishDate) || finishDate.length != 4 || finishDate <= 0) {
                         $("#alertDanger").removeClass("d-none");
                         $("#alertDanger").text("Input tahun harus merupakan angka dan terdiri dari 4 karakter!");
                         return false;

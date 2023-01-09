@@ -186,7 +186,7 @@ set_time_limit(10000);
                                 $notif = "Anda hanya dapat melakukan export kedalam bentuk excel sebanyak 1000 data pertama.";
                             }
                         ?>
-
+                    <div class="row d-flex justify-content-end mx-auto">
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                             <a
                                 class="dropdown-item"
@@ -205,6 +205,7 @@ set_time_limit(10000);
                             <i class="fa fa-file"></i>
                             Export Data</button>
                     </form>
+                </div>
                 </div>
                 <div class="card p-3 d-flex flex-column">
                     <div class="loading mt-3 mb-3 d-none">

@@ -201,7 +201,8 @@ set_time_limit(10000);
                             class="btn btn-success float-right dropdown-toggle"
                             data-toggle="dropdown"
                             aria-haspopup="true"
-                            aria-expanded="false">
+                            aria-expanded="false"
+                            disabled>
                             <i class="fa fa-file"></i>
                             Export Data</button>
                     </form>
@@ -250,6 +251,41 @@ set_time_limit(10000);
 
         <!-- select2 -->
         <script>
+            
+
+            $("#btnCari").click(function() {
+                localStorage.setItem("searchClicked", true);
+                var searchInput = $("#search").val();
+                localStorage.setItem("searchInput", searchInput);
+                $("#dropdownMenuLink").prop("disabled", false);
+            });
+
+            $("#nextButon").click(function() {
+                localStorage.setItem("nextClicked", true);
+                var searchInput = $("#search").val();
+                localStorage.setItem("searchInput", searchInput);
+                $("#dropdownMenuLink").prop("disabled", false);
+            });
+
+            $(document).ready(function() {
+                var searchClicked = localStorage.getItem("searchClicked");
+                var nextClicked = localStorage.getItem("nextClicked");
+                if (searchClicked === "true" || nextClicked === "true") {
+                    $("#dropdownMenuLink").prop("disabled", false);
+                    var searchInput = localStorage.getItem("searchInput");
+                    $("#search").val(searchInput);
+                }else{
+                    $("#dropdownMenuLink").prop("disabled", true);
+                }
+
+                if(!window.location.hash){
+                    localStorage.removeItem("searchClicked");
+                    localStorage.removeItem("nextClicked");
+                    localStorage.removeItem("searchInput");
+                    // $("#dropdownMenuLink").prop("disabled", true);
+                }
+            });
+
             $(document).ready(function () {
                 $('.select2').select2();
 
@@ -300,13 +336,13 @@ set_time_limit(10000);
 
                     if (isNaN(startDate) || startDate.length != 4 || startDate <= 0) {
                         $("#alertDanger").removeClass("d-none");
-                        $("#alertDanger").text("Input tahun harus merupakan angka dan terdiri dari 4 karakter!");
+                        $("#alertDanger").text("Input tahun harus merupakan angka dan terdiri dari 4 digit!");
                         return false;
                     }
                     
                     if (isNaN(finishDate) || finishDate.length != 4 || finishDate <= 0) {
                         $("#alertDanger").removeClass("d-none");
-                        $("#alertDanger").text("Input tahun harus merupakan angka dan terdiri dari 4 karakter!");
+                        $("#alertDanger").text("Input tahun harus merupakan angka dan terdiri dari 4 digit!");
                         return false;
                     }
 
@@ -324,7 +360,10 @@ set_time_limit(10000);
                     $(".empty").addClass("d-none");
                     $(".card-body").addClass("d-none");
                     $(".loading").removeClass("d-none");
+                    // $("#dropdownMenuLink").removeAttr("disabled");
+                    // $("#dropdownMenuLink").prop("disabled", false);
                 })
+
             });
         </script>
         <script type="text/javascript">

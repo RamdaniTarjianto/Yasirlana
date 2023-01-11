@@ -87,15 +87,15 @@ if (isset($_GET['submit'])) {
         // Show Result
         if($queries['page'] >= 2){
             if(($queries['page']) * 10 >= $totalResult){
-                echo "Show " . ($limit+($totalResult-$limit)) . " from " . number_format($totalResult);
+                echo "Show " . ($limit*($queries['page']-1)+1). "-" . ($limit+($totalResult-$limit)) . " from " . number_format($totalResult);
             }else{
-                echo "Show " . $limit*($queries['page']) . " from " . number_format($totalResult);
+                echo "Show " . ($limit*($queries['page'])-9) . "-" . $limit*($queries['page']) . " from " . number_format($totalResult);
             }
         }else{
             if(($queries['page']) * 10 >= $totalResult){
-                echo "Show " . ($limit+($totalResult-$limit)) . " from " . number_format($totalResult);
+                echo "Show " . ($limit*($queries['page']-1)+1). "-" . ($limit+($totalResult-$limit)) . " from " . number_format($totalResult);
             }else{
-                echo "Show " . $limit*($queries['page']) . " from " . number_format($totalResult);
+                echo "Show " . ($limit*($queries['page'])-9) . "-" . $limit*($queries['page']) . " from " . number_format($totalResult);
             }
         }
 

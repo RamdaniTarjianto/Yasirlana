@@ -1,25 +1,8 @@
-<?php 
-// $queries['page']=$page-1;
-// $queries['limit']=$limit;
-// $queries['max_records']=$max_records;
-// $queries['start_record']=$start_record;
-// if($databases[0] == "EPC"){
-//     $query_string_prev = "javascript:history.go(-1)";
-// }else{
-//     $query_string_prev = "searching.php?" . http_build_query($queries);
-// }
-?>
-
 <?php
     $queries['page'] = $_POST['halaman'];
     $query_string_go = http_build_query($queries);
 ?>
 
-<button class="btn btn-default" id="prev" type="">
-    <a class="" href="javascript:location.replace(document.referrer)">Prev</a>
-</button>
-<!-- <li class="page-item"><a class="page-link"
-href="javascript:history.go(-1)">Previous</a></li> -->
 </div>
 <div class="input-group-btn">
 <form name="form2" id="form2">

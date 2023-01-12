@@ -15,7 +15,7 @@
     $query_string_go = http_build_query($queries);
 ?>
 
-<button class="btn btn-default" type="">
+<button class="btn btn-default" id="prev" type="">
     <a class="" href="javascript:history.go(-1)">Prev</a>
 </button>
 <!-- <li class="page-item"><a class="page-link"
@@ -34,7 +34,7 @@ href="javascript:history.go(-1)">Previous</a></li> -->
 
 </div>
 <div class="input-group-btn">
-    <button class="btn btn-primary" name="go" type="submit">go</button>
+    <button class="btn btn-primary" id="go" name="go" type="submit">go</button>
 </form>
 
 <script>

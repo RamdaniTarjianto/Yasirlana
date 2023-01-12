@@ -274,10 +274,26 @@ set_time_limit(10000);
                 $("#dropdownMenuLink").prop("disabled", false);
             });
 
+            $("#go").click(function() {
+                localStorage.setItem("goClicked", true);
+                var searchInput = $("#search").val();
+                localStorage.setItem("searchInput", searchInput);
+                $("#dropdownMenuLink").prop("disabled", false);
+            });
+
+            $("#prev").click(function() {
+                localStorage.setItem("prevClicked", true);
+                var searchInput = $("#search").val();
+                localStorage.setItem("searchInput", searchInput);
+                $("#dropdownMenuLink").prop("disabled", false);
+            });
+
             $(document).ready(function() {
                 var searchClicked = localStorage.getItem("searchClicked");
                 var nextClicked = localStorage.getItem("nextClicked");
-                if (searchClicked === "true" || nextClicked === "true") {
+                var goClicked = localStorage.getItem("goClicked");
+                var prevClicked = localStorage.getItem("prevClicked");
+                if (searchClicked === "true" || nextClicked === "true" || goClicked === "true" || prevClicked === "true") {
                     $("#dropdownMenuLink").prop("disabled", false);
                     var searchInput = localStorage.getItem("searchInput");
                     $("#search").val(searchInput);
@@ -289,6 +305,8 @@ set_time_limit(10000);
                     localStorage.removeItem("searchClicked");
                     localStorage.removeItem("nextClicked");
                     localStorage.removeItem("searchInput");
+                    localStorage.removeItem("goClicked");
+                    localStorage.removeItem("prevClicked");
                     // $("#dropdownMenuLink").prop("disabled", true);
                 }
             });

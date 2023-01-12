@@ -173,6 +173,13 @@ set_time_limit(10000);
                     </div>
                     <div class="mb-3">
                         <medium class="text-dark">
+                            <?php 
+                                if($_GET['startDate'] > $_GET['finishDate']){
+                                    $temp = $_GET['startDate'] ;
+                                    $_GET['startDate'] = $_GET['finishDate'];
+                                    $_GET['finishDate'] = $temp;
+                                }
+                            ?>
                             <?php echo "Database: " . $_GET['databases'][0] . " || Publication Year: " . $_GET['startDate'] . "-" . $_GET['finishDate'] . " || " . "Model: ". $_GET['model']?></medium>
 
                         <?php 

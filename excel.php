@@ -37,6 +37,12 @@
             $startDate = $_GET["startDate"];
             $finishDate = $_GET["finishDate"];
 
+            if($startDate > $finishDate){
+                $temp = $startDate ;
+                $startDate = $finishDate;
+                $finishDate = $temp;
+            }
+
             $limit = 10;
             $max_records = $limit;
             $page = $_GET['page'];

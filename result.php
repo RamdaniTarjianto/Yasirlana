@@ -35,6 +35,11 @@ if (isset($_GET['submit'])) {
     $startDate = $_GET["startDate"];
     $finishDate = $_GET["finishDate"];
     $databases = $_GET['databases'];
+    if($startDate > $finishDate){
+        $temp = $startDate ;
+        $startDate = $finishDate;
+        $finishDate = $temp;
+    }
 
     foreach ($databases as $databases){ 
         switch($databases){

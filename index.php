@@ -283,7 +283,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">drg. Liana Zulfa, Sp.Perio., MARS.</a></h3>
-                                    <p>RSGM YARSIr</p>
+                                    <p>RSGM YARSI</p>
                                 </div>
                             </div>
                         </div>

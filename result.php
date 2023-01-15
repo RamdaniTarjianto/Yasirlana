@@ -174,8 +174,8 @@ if (isset($_GET['submit'])) {
                 }
 
                 // Cut Abstract Character
-                if (strlen($abstract) > 350) {
-                    $abstract = substr($abstract, 0, 350) . "<...>";
+                if (strlen($abstract) > 500) {
+                    $abstract = substr($abstract, 0, 500) . "<...>";
                 }
 
                 // Filter Tanggal

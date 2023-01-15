@@ -187,6 +187,6 @@ if (isset($_GET['submit'])) {
 }
 
 if ($countResult == 0 && $countInclude == 0 && $countExclude == 0) {
-    echo '<h4 class="empty text-muted text-center">Empty Data</h4>';
+    echo '<h4 class="empty text-center" style="color: rgba(141, 139, 139, 0.5);">Empty Data</h4>';
 }
 ?>

@@ -88,13 +88,14 @@ set_time_limit(10000);
                             </div>
                             <div class="row mt-4 g-1 px-4 mb-5">
                                 <div class="col-md-4">
-                                    <div class="form-group">
+                                    <div class="form-group" >
                                         <label style="font-size: 15px;">Select Database</label>
                                         <select
                                             class="form-control select2"
                                             name="databases[]"
-                                            data-placeholder="Database"
+                                            data-placeholder="Choose Database"
                                             id="databaseform">
+                                            <option selected disabled value="" title="Pilih sumber database yang kamu inginkan"></option>
                                             <option value="IEEE">IEEE</option>
                                             <option value="Semantic Scholar">Semantic Scholar</option>
                                             <option value="EPC">Europe PubMed Central</option>
@@ -135,7 +136,7 @@ set_time_limit(10000);
                                     <div class="form-group">
                                         <label class="display-4" style="font-size: 15px;">Select Result</label>
                                         <div class="btn-group" data-toggle="buttons" id="resultform">
-                                            <label class="btn btn-light d-flex" style="background-color: white;">
+                                            <label class="btn btn-light d-flex" title="Jika kamu memilih label ini, maka akan menghasilkan paper-paper dengan hasil 'Included' sesuai dengan keyword kamu." style="background-color: white;">
                                                 <input
                                                     type="checkbox"
                                                     style="margin-right: 10px;"
@@ -145,7 +146,7 @@ set_time_limit(10000);
                                                     autocomplete="off">
                                                 <label class="ml-auto my-auto">Included</label>
                                             </label>
-                                            <label class="btn btn-light d-flex" style="background-color: white;">
+                                            <label class="btn btn-light d-flex" title="Jika kamu memilih label ini, maka akan menghasilkan paper-paper dengan hasil 'Excluded' sesuai dengan keyword kamu." style="background-color: white;">
                                                 <input
                                                     type="checkbox"
                                                     style="margin-right: 10px;"
@@ -162,7 +163,8 @@ set_time_limit(10000);
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label style="font-size: 15px;">Select Model</label>
-                                        <select class="form-control select2" data-placeholder="Model" name="model">
+                                        <select class="form-control select2" data-placeholder="Choose Model" name="model" id="model">
+                                            <option selected disabled value=""></option>
                                             <option>AI - TMJ</option>
                                             <option>AI - ECD</option>
                                         </select>
@@ -202,7 +204,7 @@ set_time_limit(10000);
                             <?php echo "Database: " . $_GET['databases'][0] . " || Publication Year: " . $_GET['startDate'] . "-" . $_GET['finishDate'] . " || " . "Model: ". $_GET['model']?></medium>
 
                     <?php 
-                            $notif = "ab";
+                            $notif = "";
                             $databases = $_GET['databases'][0];
                             if($databases == 'IEEE'){
                                 $notif = "Anda hanya dapat melakukan export kedalam bentuk excel sebanyak 300 data pertama.";
@@ -221,8 +223,9 @@ set_time_limit(10000);
                                 <a
                                     class="dropdown-item"
                                     href="excel.php?<?php echo http_build_query($_GET); ?>"
+                                    title="<?php echo $notif; ?>"
                                     onclick="return confirm('<?php echo $notif; ?> Ingin melanjutkan export?')">Export All Pages
-                                    <i class="fas fa" title="<?php echo $notif; ?>">(i)</i>
+                                    <i class="fas fa" >&#9432;</i>
                                 </a>
                             </div>
                             <!-- </div> -->
@@ -344,6 +347,9 @@ set_time_limit(10000);
                     var keyword = document
                         .getElementById('search')
                         .value;
+                    var model = document
+                        .getElementById('model')
+                        .value;
                     var database = document
                         .getElementById('databaseform')
                         .value;
@@ -366,6 +372,11 @@ set_time_limit(10000);
                         .value;
 
                     if (keyword === '') {
+                        $("#alertDanger").removeClass("d-none");
+                        return false;
+                    }
+
+                    if (model === '') {
                         $("#alertDanger").removeClass("d-none");
                         return false;
                     }

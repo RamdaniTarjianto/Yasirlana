@@ -72,7 +72,7 @@ set_time_limit(10000);
                     <form action="" method="get" id="form1">
                         <input type="hidden" name="page" value="1">
                         <div class="p-4 mt-3">
-                            <h3 class="heading mt-5 text-center">Hi! Search Data in Here</h3>
+                            <h3 class="heading mt-5 text-center">Hi! Search Rearch Paper Here</h3>
                             <div class="d-flex justify-content-center px-4">
                                 <div class="search">
                                     <input

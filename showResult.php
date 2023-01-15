@@ -64,4 +64,5 @@ if(sizeof($results) == 1){
             echo '<span class="badge badge-danger">exclude</span></p></div>';
         }
 }
+echo '<hr height="3px" color="green" />';
 ?>

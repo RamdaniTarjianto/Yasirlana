@@ -35,6 +35,7 @@ if (isset($_GET['submit'])) {
     $startDate = $_GET["startDate"];
     $finishDate = $_GET["finishDate"];
     $databases = $_GET['databases'];
+    $model =  $_GET['model'];
     if($startDate > $finishDate){
         $temp = $startDate ;
         $startDate = $finishDate;
@@ -140,20 +141,37 @@ if (isset($_GET['submit'])) {
                 $link = "<a href='$url'>$title</a>";
                 $titleAbstract = $title . " " . $abstract;
                 $txt = preg_replace('/\s+/', '+', $titleAbstract);
-                $query = "https://slr-deploy-hzouxonooq-uc.a.run.app/predict?text=$txt";
-                $curl = curl_init();
-                curl_setopt_array($curl, array(
-                    CURLOPT_URL => $query,
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_TIMEOUT => 30,
-                    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-                    CURLOPT_CUSTOMREQUEST => "POST",
-                    CURLOPT_HTTPHEADER => array(
-                        "Content-Length: 0"
-                    ),
-                ));
-                $response = curl_exec($curl);
-                $err = curl_error($curl);
+                if($model == "AI - TMJ"){
+                    $query = "https://slr-deploy-hzouxonooq-uc.a.run.app/predict?text=$txt";
+                    $curl = curl_init();
+                    curl_setopt_array($curl, array(
+                        CURLOPT_URL => $query,
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_TIMEOUT => 30,
+                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST => "POST",
+                        CURLOPT_HTTPHEADER => array(
+                            "Content-Length: 0"
+                        ),
+                    ));
+                    $response = curl_exec($curl);
+                    $err = curl_error($curl);
+                }else{
+                    $query = "https://slr-model-hzouxonooq-uc.a.run.app/predict?text=$txt";
+                    $curl = curl_init();
+                    curl_setopt_array($curl, array(
+                        CURLOPT_URL => $query,
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_TIMEOUT => 30,
+                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST => "POST",
+                        CURLOPT_HTTPHEADER => array(
+                            "Content-Length: 0"
+                        ),
+                    ));
+                    $response = curl_exec($curl);
+                    $err = curl_error($curl);
+                }
 
                 // Cut Abstract Character
                 if (strlen($abstract) > 250) {

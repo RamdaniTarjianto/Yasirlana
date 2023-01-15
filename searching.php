@@ -79,7 +79,7 @@ set_time_limit(10000);
                                         type="text"
                                         id="search"
                                         class="search-input fa fa-search"
-                                        placeholder="Type Keyword ..."
+                                        placeholder="Type Keyword (e.g TMJ)..."
                                         name="research_name">
 
                                     <!-- <button type="submit" class="search-icon btn searchButton" name="submit">
@@ -164,6 +164,7 @@ set_time_limit(10000);
                                         <label style="font-size: 15px;">Select Model</label>
                                         <select class="form-control select2" data-placeholder="Model" name="model">
                                             <option>AI - TMJ</option>
+                                            <option>AI - ECD</option>
                                         </select>
                                     </div>
 

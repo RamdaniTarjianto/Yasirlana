@@ -4,6 +4,11 @@
   top: 2rem;
 }
 
+.same-height {
+  height: 100%;
+}
+
+
 .header-4-2 .navbar,
 .header-4-2 .hero {
   padding: 3rem 2rem;

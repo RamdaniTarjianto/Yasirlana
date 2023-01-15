@@ -64,27 +64,26 @@ set_time_limit(10000);
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            
-            <!--  -->
+
+            <!-- -->
             <!--search -->
             <div class="row d-flex justify-content-center">
                 <div class="col-md-9">
                     <form action="" method="get" id="form1">
                         <input type="hidden" name="page" value="1">
                         <div class="p-4 mt-3">
-                            <h3 class="heading mt-5 text-center">Hi! Search Rearch Paper Here</h3>
+                            <h3 class="heading mt-5 text-center">Hi! Search Your Rearch Paper Here</h3>
                             <div class="d-flex justify-content-center px-4">
                                 <div class="search">
                                     <input
                                         type="text"
                                         id="search"
-                                        class="search-input"
+                                        class="search-input fa fa-search"
                                         placeholder="Type Keyword ..."
                                         name="research_name">
 
                                     <!-- <button type="submit" class="search-icon btn searchButton" name="submit">
-                                        <i class="fa fa-search"></i>
-                                    </button> -->
+                                    <i class="fa fa-search"></i> </button> -->
                                 </div>
                             </div>
                             <div class="row mt-4 g-1 px-4 mb-5">
@@ -111,7 +110,8 @@ set_time_limit(10000);
                                                 value=""
                                                 name="startDate"
                                                 id="startDate"
-                                                required="required">
+                                                required="required"
+                                                placeholder="Start">
                                             <div class="input-group-addon">to</div>
                                             <input
                                                 type="text"
@@ -119,8 +119,14 @@ set_time_limit(10000);
                                                 value=""
                                                 name="finishDate"
                                                 id="finishDate"
-                                                required="required">
-                                            <input type="submit" class="btn btn-success ml-4 searchButton" name="submit" id="btnCari" value="Cari">
+                                                required="required"
+                                                placeholder="End">
+                                            <input
+                                                type="submit"
+                                                class="btn btn-success ml-4 searchButton"
+                                                name="submit"
+                                                id="btnCari"
+                                                value="Cari">
                                         </div>
 
                                     </div>
@@ -129,13 +135,25 @@ set_time_limit(10000);
                                     <div class="form-group">
                                         <label>Select Result</label>
                                         <div class="btn-group" data-toggle="buttons" id="resultform">
-                                            <label class="btn btn-light" style="background-color: white;">
-                                                <input type="checkbox" id="included" name="result[]" value="Included" autocomplete="off">
-                                                Included
+                                            <label class="btn btn-light d-flex" style="background-color: white;">
+                                                <input
+                                                    type="checkbox"
+                                                    style="margin-right: 10px;"
+                                                    id="included"
+                                                    name="result[]"
+                                                    value="Included"
+                                                    autocomplete="off">
+                                                <label class="ml-auto my-auto">Included</label>
                                             </label>
-                                            <label class="btn btn-light" style="background-color: white;">
-                                                <input type="checkbox" id="excluded" name="result[]" value="Excluded" autocomplete="off">
-                                                Excluded
+                                            <label class="btn btn-light d-flex" style="background-color: white;">
+                                                <input
+                                                    type="checkbox"
+                                                    style="margin-right: 10px;"
+                                                    id="excluded"
+                                                    name="result[]"
+                                                    value="Excluded"
+                                                    autocomplete="off">
+                                                <label class="ml-auto my-auto">Excluded</label>
                                             </label>
                                         </div>
                                     </div>
@@ -182,7 +200,7 @@ set_time_limit(10000);
                             ?>
                             <?php echo "Database: " . $_GET['databases'][0] . " || Publication Year: " . $_GET['startDate'] . "-" . $_GET['finishDate'] . " || " . "Model: ". $_GET['model']?></medium>
 
-                        <?php 
+                    <?php 
                             $notif = "ab";
                             $databases = $_GET['databases'][0];
                             if($databases == 'IEEE'){
@@ -193,27 +211,31 @@ set_time_limit(10000);
                                 $notif = "Anda hanya dapat melakukan export kedalam bentuk excel sebanyak 1000 data pertama.";
                             }
                         ?>
-                    <div class="row d-flex justify-content-end mx-auto">
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a
-                                class="dropdown-item"
-                                href="excelPage.php?<?php echo http_build_query($_GET); ?>"
-                                onclick="return confirm('Apakah Anda yakin ingin mengekspor halaman ini?')">Export This Page</a>
-                            <a class="dropdown-item" href="excel.php?<?php echo http_build_query($_GET); ?>"
-                            onclick="return confirm('<?php echo $notif; ?> Ingin melanjutkan export?')">Export All Pages <i class="fas" title="<?php echo $notif; ?>">(i)</i></a>
-                        </div>
-                        <!-- </div> -->
-                        <button
-                            id="dropdownMenuLink"
-                            class="btn btn-success float-right dropdown-toggle"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            disabled>
-                            <i class="fa fa-file"></i>
-                            Export Data</button>
-                    </form>
-                </div>
+                        <div class="row d-flex justify-content-end mx-auto">
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a
+                                    class="dropdown-item"
+                                    href="excelPage.php?<?php echo http_build_query($_GET); ?>"
+                                    onclick="return confirm('Apakah Anda yakin ingin mengekspor halaman ini?')">Export This Page</a>
+                                <a
+                                    class="dropdown-item"
+                                    href="excel.php?<?php echo http_build_query($_GET); ?>"
+                                    onclick="return confirm('<?php echo $notif; ?> Ingin melanjutkan export?')">Export All Pages
+                                    <i class="fas fa" title="<?php echo $notif; ?>">(i)</i>
+                                </a>
+                            </div>
+                            <!-- </div> -->
+                            <button
+                                id="dropdownMenuLink"
+                                class="btn btn-success float-right dropdown-toggle"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                disabled="disabled">
+                                <i class="fa fa-file"></i>
+                                Export Data</button>
+                        </form>
+                    </div>
                 </div>
                 <div class="card p-3 d-flex flex-column">
                     <div class="loading mt-3 mb-3 d-none">
@@ -258,37 +280,36 @@ set_time_limit(10000);
 
         <!-- select2 -->
         <script>
-            
 
-            $("#btnCari").click(function() {
+            $("#btnCari").click(function () {
                 localStorage.setItem("searchClicked", true);
                 var searchInput = $("#search").val();
                 localStorage.setItem("searchInput", searchInput);
                 $("#dropdownMenuLink").prop("disabled", false);
             });
 
-            $("#nextButon").click(function() {
+            $("#nextButon").click(function () {
                 localStorage.setItem("nextClicked", true);
                 var searchInput = $("#search").val();
                 localStorage.setItem("searchInput", searchInput);
                 $("#dropdownMenuLink").prop("disabled", false);
             });
 
-            $("#go").click(function() {
+            $("#go").click(function () {
                 localStorage.setItem("goClicked", true);
                 var searchInput = $("#search").val();
                 localStorage.setItem("searchInput", searchInput);
                 $("#dropdownMenuLink").prop("disabled", false);
             });
 
-            $("#prev").click(function() {
+            $("#prev").click(function () {
                 localStorage.setItem("prevClicked", true);
                 var searchInput = $("#search").val();
                 localStorage.setItem("searchInput", searchInput);
                 $("#dropdownMenuLink").prop("disabled", false);
             });
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var searchClicked = localStorage.getItem("searchClicked");
                 var nextClicked = localStorage.getItem("nextClicked");
                 var goClicked = localStorage.getItem("goClicked");
@@ -297,11 +318,11 @@ set_time_limit(10000);
                     $("#dropdownMenuLink").prop("disabled", false);
                     var searchInput = localStorage.getItem("searchInput");
                     $("#search").val(searchInput);
-                }else{
+                } else {
                     $("#dropdownMenuLink").prop("disabled", true);
                 }
 
-                if(!window.location.hash){
+                if (!window.location.hash) {
                     localStorage.removeItem("searchClicked");
                     localStorage.removeItem("nextClicked");
                     localStorage.removeItem("searchInput");
@@ -361,13 +382,17 @@ set_time_limit(10000);
 
                     if (isNaN(startDate) || startDate.length != 4 || startDate <= 0) {
                         $("#alertDanger").removeClass("d-none");
-                        $("#alertDanger").text("Input tahun harus merupakan angka dan terdiri dari 4 digit!");
+                        $("#alertDanger").text(
+                            "Input tahun harus merupakan angka dan terdiri dari 4 digit!"
+                        );
                         return false;
                     }
-                    
+
                     if (isNaN(finishDate) || finishDate.length != 4 || finishDate <= 0) {
                         $("#alertDanger").removeClass("d-none");
-                        $("#alertDanger").text("Input tahun harus merupakan angka dan terdiri dari 4 digit!");
+                        $("#alertDanger").text(
+                            "Input tahun harus merupakan angka dan terdiri dari 4 digit!"
+                        );
                         return false;
                     }
 

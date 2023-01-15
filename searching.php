@@ -89,7 +89,7 @@ set_time_limit(10000);
                             <div class="row mt-4 g-1 px-4 mb-5">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Select Database</label>
+                                        <label style="font-size: 15px;">Select Database</label>
                                         <select
                                             class="form-control select2"
                                             name="databases[]"
@@ -102,7 +102,7 @@ set_time_limit(10000);
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Publication Year</label>
+                                        <label class="display-4" style="font-size: 15px;">Publication Year</label>
                                         <div class="input-group input-daterange">
                                             <input
                                                 type="text"
@@ -133,7 +133,7 @@ set_time_limit(10000);
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Select Result</label>
+                                        <label class="display-4" style="font-size: 15px;">Select Result</label>
                                         <div class="btn-group" data-toggle="buttons" id="resultform">
                                             <label class="btn btn-light d-flex" style="background-color: white;">
                                                 <input
@@ -161,7 +161,7 @@ set_time_limit(10000);
 
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label>Select Model</label>
+                                        <label style="font-size: 15px;">Select Model</label>
                                         <select class="form-control select2" data-placeholder="Model" name="model">
                                             <option>AI - TMJ</option>
                                         </select>
@@ -225,15 +225,17 @@ set_time_limit(10000);
                                 </a>
                             </div>
                             <!-- </div> -->
+
                             <button
                                 id="dropdownMenuLink"
-                                class="btn btn-success float-right dropdown-toggle"
+                                class="btn btn-secondary float-right dropdown-toggle"
                                 data-toggle="dropdown"
                                 aria-haspopup="true"
                                 aria-expanded="false"
                                 disabled="disabled">
                                 <i class="fa fa-file"></i>
                                 Export Data</button>
+
                         </form>
                     </div>
                 </div>
@@ -317,6 +319,8 @@ set_time_limit(10000);
                 if (searchClicked === "true" || nextClicked === "true" || goClicked === "true" || prevClicked === "true") {
                     $("#dropdownMenuLink").prop("disabled", false);
                     var searchInput = localStorage.getItem("searchInput");
+                    $("#dropdownMenuLink").removeClass("btn-secondary");
+                    $("#dropdownMenuLink").addClass("btn-success");    
                     $("#search").val(searchInput);
                 } else {
                     $("#dropdownMenuLink").prop("disabled", true);

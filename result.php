@@ -89,7 +89,7 @@ if (isset($_GET['submit'])) {
             break;
         }
 
-
+        echo "<div style='margin-left: 20px'>";
         // Show Result
         if($queries['page'] >= 2){
             if(($queries['page']) * 10 >= $totalResult){
@@ -104,6 +104,7 @@ if (isset($_GET['submit'])) {
                 echo "Show " . ($limit*($queries['page'])-9) . "-" . $limit*($queries['page']) . " from " . number_format($totalResult);
             }
         }
+        echo "</div";
 
         $results = $_GET['result'];
             for ($i = 0; $i < $size; $i++) {

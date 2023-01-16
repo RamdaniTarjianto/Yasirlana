@@ -16,6 +16,7 @@ set_time_limit(10000);
             content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <!-- Bootstrap CSS -->
+        <link href="assets/css/fontawesome-all.min.css" rel="stylesheet"/>
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -219,13 +220,13 @@ set_time_limit(10000);
                                 <a
                                     class="dropdown-item"
                                     href="excelPage.php?<?php echo http_build_query($_GET); ?>"
-                                    onclick="return confirm('Apakah Anda yakin ingin mengekspor halaman ini?')">Export This Page</a>
+                                    onclick="return confirm('Apakah Anda yakin ingin mengekspor halaman ini?')">Export This Page (.xls)</a>
                                 <a
                                     class="dropdown-item"
                                     href="excel.php?<?php echo http_build_query($_GET); ?>"
                                     title="<?php echo $notif; ?>"
-                                    onclick="return confirm('<?php echo $notif; ?> Ingin melanjutkan export?')">Export All Pages
-                                    <i class="fas fa" >&#9432;</i>
+                                    onclick="return confirm('<?php echo $notif; ?> Ingin melanjutkan export?')">Export All Pages (.xls)
+                                    <i class="fas fa-info-circle"></i>
                                 </a>
                             </div>
                             <!-- </div> -->

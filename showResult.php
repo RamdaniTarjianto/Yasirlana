@@ -37,10 +37,12 @@ if(sizeof($results) == 1){
                         $countResult++;
                         $countInclude++;
                         echo '<span class="badge badge-success">include</span></p></div>';
+                        echo '<hr height="3px" color="green" />';
                     }else {
                         $countResult++;
                         $countExclude++;
                         echo '<span class="badge badge-danger">exclude</span></p></div>';
+                        echo '<hr height="3px" color="green" />';
                     }
             }	
         break;
@@ -58,11 +60,12 @@ if(sizeof($results) == 1){
             $countResult++;
             $countInclude++;
             echo '<span class="badge badge-success">include</span></p></div>';
+            echo '<hr height="3px" color="green" />';
         }else {
             $countResult++;
             $countExclude++;
             echo '<span class="badge badge-danger">exclude</span></p></div>';
+            echo '<hr height="3px" color="green" />';
         }
 }
-echo '<hr height="3px" color="green" />';
 ?>

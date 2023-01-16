@@ -157,7 +157,7 @@ if (isset($_GET['submit'])) {
                     $response = curl_exec($curl);
                     $err = curl_error($curl);
                 }else{
-                    $query = "https://slr-model-hzouxonooq-uc.a.run.app/predict?text=$txt";
+                    $query = "https://slr-komorbid-hzouxonooq-uc.a.run.app/predict?text=$txt";
                     $curl = curl_init();
                     curl_setopt_array($curl, array(
                         CURLOPT_URL => $query,

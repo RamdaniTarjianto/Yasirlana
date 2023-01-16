@@ -89,55 +89,41 @@ set_time_limit(10000);
                             </div>
                             <div class="row mt-4 g-1 px-4 mb-5">
                                 <div class="col-md-4">
-                                    <div class="form-group" >
+                                    <div class="form-group">
                                         <label style="font-size: 15px;">Select Database</label>
                                         <select
                                             class="form-control select2"
                                             name="databases[]"
                                             data-placeholder="Choose Database"
                                             id="databaseform">
-                                            <option selected disabled value="" title="Pilih sumber database yang kamu inginkan"></option>
+                                            <option
+                                                selected="selected"
+                                                disabled="disabled"
+                                                value=""
+                                                title="Pilih sumber database yang kamu inginkan"></option>
                                             <option value="IEEE">IEEE</option>
                                             <option value="Semantic Scholar">Semantic Scholar</option>
                                             <option value="EPC">Europe PubMed Central</option>
                                         </select>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label class="display-4" style="font-size: 15px;">Publication Year</label>
-                                        <div class="input-group input-daterange">
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                value=""
-                                                name="startDate"
-                                                id="startDate"
-                                                required="required"
-                                                placeholder="Start">
-                                            <div class="input-group-addon">to</div>
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                value=""
-                                                name="finishDate"
-                                                id="finishDate"
-                                                required="required"
-                                                placeholder="End">
-                                            <input
-                                                type="submit"
-                                                class="btn btn-success ml-4 searchButton"
-                                                name="submit"
-                                                id="btnCari"
-                                                value="Cari">
-                                        </div>
-
-                                    </div>
+                                    <!-- <div class="form-group"> <label class="display-4" style="font-size:
+                                    15px;">Publication Year</label> <div class="input-group input-daterange"> <input
+                                    type="text" class="form-control" value="" name="startDate" id="startDate"
+                                    required="required" placeholder="Start"> <div class="input-group-addon">to</div>
+                                    <input type="text" class="form-control" value="" name="finishDate"
+                                    id="finishDate" required="required" placeholder="End"> <input type="submit"
+                                    class="btn btn-success ml-4 searchButton" name="submit" id="btnCari"
+                                    value="Cari"> </div> </div> -->
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="display-4" style="font-size: 15px;">Select Result</label>
                                         <div class="btn-group" data-toggle="buttons" id="resultform">
-                                            <label class="btn btn-light d-flex" title="Jika kamu memilih label ini, maka akan menghasilkan paper-paper dengan hasil 'Included' sesuai dengan keyword kamu." style="background-color: white;">
+                                            <label
+                                                class="btn btn-light d-flex"
+                                                title="Jika kamu memilih label ini, maka akan menghasilkan paper-paper dengan hasil 'Included' sesuai dengan keyword kamu."
+                                                style="background-color: white;">
                                                 <input
                                                     type="checkbox"
                                                     style="margin-right: 10px;"
@@ -147,7 +133,10 @@ set_time_limit(10000);
                                                     autocomplete="off">
                                                 <label class="ml-auto my-auto">Included</label>
                                             </label>
-                                            <label class="btn btn-light d-flex" title="Jika kamu memilih label ini, maka akan menghasilkan paper-paper dengan hasil 'Excluded' sesuai dengan keyword kamu." style="background-color: white;">
+                                            <label
+                                                class="btn btn-light d-flex"
+                                                title="Jika kamu memilih label ini, maka akan menghasilkan paper-paper dengan hasil 'Excluded' sesuai dengan keyword kamu."
+                                                style="background-color: white;">
                                                 <input
                                                     type="checkbox"
                                                     style="margin-right: 10px;"
@@ -164,8 +153,12 @@ set_time_limit(10000);
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label style="font-size: 15px;">Select Model</label>
-                                        <select class="form-control select2" data-placeholder="Choose Model" name="model" id="model">
-                                            <option selected disabled value=""></option>
+                                        <select
+                                            class="form-control select2"
+                                            data-placeholder="Choose Model"
+                                            name="model"
+                                            id="model">
+                                            <option selected="selected" disabled="disabled" value=""></option>
                                             <option>AI - TMJ</option>
                                             <option>AI - ECD</option>
                                         </select>
@@ -174,6 +167,35 @@ set_time_limit(10000);
                                     <!-- <button name="export" id="export" class="btn btn-success float-right"
                                     onclick="submitForm('excel.php')"> <i class="fa fa-file"></i> Export
                                     Data</button> -->
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <label class="display-4" style="font-size: 15px;">Publication Year</label>
+                                    <div class="input-group input-daterange">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            value=""
+                                            name="startDate"
+                                            id="startDate"
+                                            required="required"
+                                            placeholder="Start">
+                                        <div class="input-group-addon">to</div>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            value=""
+                                            name="finishDate"
+                                            id="finishDate"
+                                            required="required"
+                                            placeholder="End">
+                                        <input
+                                            type="submit"
+                                            class="btn btn-success ml-4 searchButton"
+                                            name="submit"
+                                            id="btnCari"
+                                            value="Search">
+                                    </div>
+
                                 </div>
 
                             </div>
@@ -325,7 +347,7 @@ set_time_limit(10000);
                     $("#dropdownMenuLink").prop("disabled", false);
                     var searchInput = localStorage.getItem("searchInput");
                     $("#dropdownMenuLink").removeClass("btn-secondary");
-                    $("#dropdownMenuLink").addClass("btn-success");    
+                    $("#dropdownMenuLink").addClass("btn-success");
                     $("#search").val(searchInput);
                 } else {
                     $("#dropdownMenuLink").prop("disabled", true);

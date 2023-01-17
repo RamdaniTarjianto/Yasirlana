@@ -88,6 +88,7 @@ p {
   line-height: 30px;
   margin-bottom: 15px;
   font-weight: normal;
+  margin-right: 30px;
 }
 .img {
   max-width: 100%;
@@ -162,8 +163,8 @@ li {
   list-style: none;
 }
 .section-padding {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .owl-carousel .owl-nav div {
   background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;

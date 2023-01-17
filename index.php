@@ -27,7 +27,7 @@
 
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a href="#">
-                    <img style="margin-right: 0.75rem" src="assets/img/logo/icon_navbar.svg" alt="" />
+                    <img style="margin-right: 0.75rem" src="assets/img/logo/yasirlana_nav.svg" alt="" />
                 </a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="modal" data-bs-target="#targetModal-item">
                     <span class="navbar-toggler-icon"></span>
@@ -53,7 +53,7 @@
                                     </li>
                                     <!-- <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li> -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#Teams">About Us</a>
+                                        <a class="nav-link" href="#Teams">Our Teams</a>
                                     </li>
                                     <!-- <li class="nav-item">
                                             <a class="nav-link" href="#">Contact</a>
@@ -78,7 +78,7 @@
                         </li>
                         <!-- <li class="nav-item"> <a class="nav-link" href="#">Pricing</a> </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="#Teams">About Us</a>
+                            <a class="nav-link" href="#Teams">Our Teams</a>
                         </li>
                         <!-- <li class="nav-item">
                                 <a class="nav-link" href="#">Contact</a>
@@ -97,8 +97,9 @@
                     <div class="left-column d-flex flex-lg-grow-1 flex-column align-items-lg-start text-lg-start align-items-center text-center">
                         <!-- <p class="text-caption">FREE 30 DAY TRIAL</p> -->
                         <h1 class="title-text-big">
-                            YARSI Systematic Review Language Automation
+                            YASRSI Systematic Review Language Automation
                         </h1>
+                        <p> YASIRLANA is an automation system that can be used to assist the process of screening articles or journals in the Systematic Literature Review.</p>
 
                         <div class="d-flex flex-sm-row flex-column align-items-center mx-lg-0 mx-auto justify-content-center gap-3">
                             <form action="searching.php">
@@ -120,35 +121,21 @@
                     </div>
 
                     <!-- Right Column -->
-                    <div class="right-column text-center d-flex justify-content-lg-end justify-content-center pe-0">
+                    <!-- <div class="right-column text-center d-flex justify-content-lg-end justify-content-center pe-0">
+                        <img id="img-fluid" class="h-auto mw-100" src="images/Yasirlana.svg" alt="" />
+                    </div> -->
+
+                    <div class="right-column text-center d-flex justify-content-lg-end justify-content-center position-relative top-10 ml-auto pe-0">
                         <img id="img-fluid" class="h-auto mw-100" src="images/Yasirlana.svg" alt="" />
                     </div>
+
                 </div>
             </div>
+
         </div>
     </section>
 
-    <section class="famouly-brands-darken">
-        <h3 style="text-align:center">OUR PARTNER</h3><br>
 
-        <!-- LOGO -->
-        <div class="container">
-            <div class="row brand">
-                <div class="col-md-3 col-6 text-center my-md-auto">
-                    <img src="images/yarsi.jfif" alt="" class="img-fluid">
-                </div>
-                <div class="col-md-3 col-6 text-center my-md-auto">
-                    <img src="images/fti.png" alt="" class="img-fluid">
-                </div>
-                <div class="col-md-3 col-6 text-center my-md-auto mt-5 mt-md-0">
-                    <img src="images/fkg.jfif" alt="" class="img-fluid">
-                </div>
-                <div class="col-md-3 col-6 text-center my-md-auto mt-5 mt-md-0">
-                    <img src="images/rsgm.png" alt="" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- FITUR -->
     <section class="content" id="feature">
@@ -167,7 +154,7 @@
                     <div class="row benefits text-center px-0">
                         <div class="col-md-3 mt-md-0">
                             <div class="rectangle mx-auto px-1">
-                                <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-Job/job-worldwide.svg" alt="benefits-1" class="img-fluid">
+                                <img src="assets/img/logo/full-access.svg" alt="benefits-1" class="img-fluid">
                                 <div class="headline-benefit">
                                     Full Access
                                 </div>
@@ -180,7 +167,7 @@
                         </div>
                         <div class="col-md-3 mt-5 mt-md-0">
                             <div class="rectangle mx-auto px-1">
-                                <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-Job/job-corporate.svg" alt="benefits-1" class="img-fluid">
+                                <img src="assets/img/logo/easy.svg" alt="benefits-1" class="img-fluid">
                                 <div class="headline-benefit">
                                     Easy To Use
                                 </div>
@@ -193,7 +180,7 @@
                         </div>
                         <div class="col-md-3 mt-5 mt-md-0">
                             <div class="rectangle mx-auto px-1">
-                                <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-Job/job-secure.svg" alt="benefits-1" class="img-fluid">
+                                <img src="assets/img/logo/ai.svg" alt="benefits-1" class="img-fluid">
 
                                 <div class="headline-benefit">
                                     Use AI Technology
@@ -207,7 +194,8 @@
                         </div>
                         <div class="col-md-3 mt-5 mt-md-0">
                             <div class="rectangle mx-auto px-1">
-                                <img src="https://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content-Job/job-rewards.svg" alt="benefits-1" class="img-fluid">
+
+                                <img src="assets/img/logo/excel.svg" alt="benefits-1" class="img-fluid">
                                 <div class="headline-benefit">
                                     Export Results
                                 </div>
@@ -226,14 +214,14 @@
     </section>
 
     <!-- OUR TEAMS -->
-    <section id="Teams">
+    <section style=" background-color: #f2f2f2;" id="Teams" class="famouly-brands-darken">
         <div class="team-area section-padding">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="cl-xl-8 col-lg-8 col-md-10">
 
                         <div class="section-tittle text-center mb-60">
-                            <h2>Our Teams</h2>
+                            <h3 style="text-align:center">OUR TEAMS</h3>
                             <p>This research is a collaboration between the Faculty of Dentistry (FKG) and the Faculty of Information Technology (FTI) at YARSI University in the leading research field of health informatics.</p>
                         </div>
                     </div>
@@ -260,7 +248,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">drg. Chaerita Maulani, Sp.Perio</a></h3>
-                                    <p>RSGM YARSI</p>
+                                    <p>Kepala Prodi Akademik Kedokteran Gigi</p>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +256,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/team1.png" alt="">
+                                    <img src="assets/img/gallery/dharma.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -283,7 +271,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">drg. Liana Zulfa, Sp.Perio., MARS.</a></h3>
-                                    <p>RSGM YARSI</p>
+                                    <p>Direktur RSGM YARSI</p>
                                 </div>
                             </div>
                         </div>
@@ -291,7 +279,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/team1.png" alt="">
+                                    <img src="assets/img/gallery/dharma.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -306,7 +294,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">drg. Dharma Satya Aprianto, Sp.Pros</a></h3>
-                                    <p>RSGM YARSI</p>
+                                    <p>Kepala Prodi Profesi Kedokteran Gigi</p>
                                 </div>
                             </div>
                         </div>
@@ -314,7 +302,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/team2.png" alt="">
+                                    <img src="assets/img/gallery/chandra.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -329,7 +317,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">Chandra Prasetyo Utomo, S.Kom., M.Sc.</a></h3>
-                                    <p>FTI YARSI</p>
+                                    <p>Kepala Pusat Penelitian e-Health</p>
                                 </div>
                             </div>
                         </div>
@@ -337,7 +325,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/team2.png" alt="">
+                                    <img src="assets/img/gallery/fathur.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -352,7 +340,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">Muhammad Fathurachman, S.Kom, M.Kom.</a></h3>
-                                    <p>FTI YARSI</p>
+                                    <p>Sekertaris Pogram Studi TI</p>
                                 </div>
                             </div>
                         </div>
@@ -429,7 +417,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/team3.png" alt="">
+                                    <img src="assets/img/gallery/dharma.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -452,7 +440,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/team3.png" alt="">
+                                    <img src="assets/img/gallery/dharma.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -475,7 +463,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/team3.png" alt="">
+                                    <img src="assets/img/gallery/dharma.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -500,6 +488,8 @@
             </div>
         </div>
     </section>
+
+
 
 
 
@@ -547,15 +537,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-2 col-lg-3 col-md-3 col-sm-6">
+                    <div class=" col-lg-3 col-md-3 col-sm-6">
                         <div class="single-footer-caption mb-50">
                             <div class="footer-tittle">
                                 <h4>About Us</h4>
                                 <ul>
-                                    <li><a href="#">Universitas YARSI</a></li>
-                                    <li><a href="#">Fakultas Teknologi Informasi Universitas YARSI</a></li>
-                                    <li><a href="#">Fakultas Kedokteran Gigi Universitas YARSI</a></li>
-                                    <li><a href="#">Rumah Sakit Gigi dan Mulut YARSI</a></li>
+                                    <li>
+                                        <i class="icon fas fa-map-marker-alt"></i> Jl. Letjen Suprapto, Cemp. Putih, Kota Jakarta Pusat
+                                    </li>
+
+                                    <li>
+                                        <!-- <i class="icon fas fa-phone"></i> +628123345678 -->
+                                        <!-- <i class="fas fa-envelope"></i> +628123345678 -->
+                                        <!-- <i class="fab fa-phone"></i> +628123345678 -->
+                                    </li>
                                 </ul>
                             </div>
                         </div>

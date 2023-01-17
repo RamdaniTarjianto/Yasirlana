@@ -4,13 +4,9 @@
   top: 2rem;
 }
 
-.same-height {
-  height: 100%;
-  color: rgba(141, 139, 139, 0.5)
+.icon {
+  padding-right: 10px;
 }
-
-
-
 
 .header-4-2 .navbar,
 .header-4-2 .hero {
@@ -18,7 +14,7 @@
 }
 
 .header-4-2 .navbar-light .navbar-nav .nav-link {
-  font: 300 18px/1.5rem Poppins, sans-serif;
+  font: 300 20px/1.5rem Poppins, sans-serif;
   color: #1d1e3c;
   transition: 0.3s;
 }
@@ -97,7 +93,7 @@
 .header-4-2 .title-text-big {
   font: 600 2.25rem/2.5rem Poppins, sans-serif;
   margin-bottom: 2rem;
-  color: #272e35;
+  color: #000000;
 }
 
 .header-4-2 .btn-try {
@@ -183,11 +179,11 @@
   }
 
   .header-4-2 .navbar {
-    padding: 3rem 6rem;
+    padding: 2rem 6rem;
   }
 
   .header-4-2 .hero {
-    padding: 3rem 6rem 5rem;
+    padding: 5rem 6rem 10rem;
   }
 
   .header-4-2 .left-column {
@@ -242,7 +238,7 @@ body .content .content .tagline {
   font-weight: bold;
   font-size: 18px;
   line-height: 27px;
-
+  margin-left: 25px;
   color: #db0d70;
 }
 
@@ -250,9 +246,10 @@ body .content .content .headline {
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 35px;
   line-height: 67px;
   color: #111f37;
+  margin-left: 25px;
 }
 
 body .content .content .benefits {

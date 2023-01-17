@@ -97,7 +97,7 @@
                     <div class="left-column d-flex flex-lg-grow-1 flex-column align-items-lg-start text-lg-start align-items-center text-center">
                         <!-- <p class="text-caption">FREE 30 DAY TRIAL</p> -->
                         <h1 class="title-text-big">
-                            YASRSI Systematic Review Language Automation
+                            YARSI Systematic Review Language Automation
                         </h1>
                         <p> YASIRLANA is an automation system that can be used to assist the process of screening articles or journals in the Systematic Literature Review.</p>
 

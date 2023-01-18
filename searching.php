@@ -121,7 +121,7 @@ set_time_limit(10000);
                                         <label class="display-4" style="font-size: 15px;">Select Result</label>
                                         <div class="btn-group" data-toggle="buttons" id="resultform">
                                             <label
-                                                class="btn btn-light d-flex"
+                                                class="btn btn-light d-flex mt-1 form-control-lg"
                                                 title="Jika kamu memilih label ini, maka akan menghasilkan paper-paper dengan hasil 'Included' sesuai dengan keyword kamu."
                                                 style="background-color: white;">
                                                 <input
@@ -134,7 +134,7 @@ set_time_limit(10000);
                                                 <label class="ml-auto my-auto">Included</label>
                                             </label>
                                             <label
-                                                class="btn btn-light d-flex"
+                                                class="btn btn-light d-flex mt-1 form-control-lg"
                                                 title="Jika kamu memilih label ini, maka akan menghasilkan paper-paper dengan hasil 'Excluded' sesuai dengan keyword kamu."
                                                 style="background-color: white;">
                                                 <input

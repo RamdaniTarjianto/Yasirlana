@@ -11,8 +11,30 @@
             // $data = json_decode($url, true);
         
 	}
+    $startDate = $_GET["startDate"];
+    $finishDate = $_GET["finishDate"];
+
+    if($startDate > $finishDate){
+        $temp = $startDate ;
+        $startDate = $finishDate;
+        $finishDate = $temp;
+    }
+
+    $limit = 10;
+    $max_records = $limit;
+    $page = $_GET['page'];
+    $offset = ($page - 1) * $limit;
+    $start_record = $offset;
+    $keyword = $_GET['research_name'];
+    $keyword = preg_replace('/\s+/', '+', $keyword);
+    $databases = $_GET['databases'][0];
+    $result = $_GET['result'];
+    $model = $_GET['model'];
+    $totalResult = 0;
+    $totalPages = 0;
+    $filename = "HasilExport" . "_" . $keyword . "_" . $startDate . "-" . $finishDate;
     header("Content-type: application/vnd-ms-excel");
-    header("Content-Disposition: attachment; filename=hasil.xls");
+    header("Content-Disposition: attachment; filename=$filename.xls");
 
 ?>
 
@@ -34,28 +56,6 @@
     </thead>
 
 <?php
-            $startDate = $_GET["startDate"];
-            $finishDate = $_GET["finishDate"];
-
-            if($startDate > $finishDate){
-                $temp = $startDate ;
-                $startDate = $finishDate;
-                $finishDate = $temp;
-            }
-
-            $limit = 10;
-            $max_records = $limit;
-            $page = $_GET['page'];
-            $offset = ($page - 1) * $limit;
-            $start_record = $offset;
-            $keyword = $_GET['research_name'];
-            $keyword = preg_replace('/\s+/', '+', $keyword);
-            $databases = $_GET['databases'][0];
-            $result = $_GET['result'];
-            $model = $_GET['model'];
-            $totalResult = 0;
-            $totalPages = 0;
-
             // foreach ($databases as $databases){ 
                 // echo $databases."<br />";
                 switch($databases){

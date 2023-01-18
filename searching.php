@@ -179,7 +179,7 @@ set_time_limit(10000);
                                             id="startDate"
                                             required="required"
                                             placeholder="Start">
-                                        <div class="input-group-addon">to</div>
+                                        <div class="input-group-addon d-flex align-items-center ml-2 mr-2">to</div>
                                         <input
                                             type="text"
                                             class="form-control"

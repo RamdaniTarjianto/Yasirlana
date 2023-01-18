@@ -204,8 +204,8 @@
 
 body .famouly-brands-darken {
   background: radial-gradient(100% 100% at 50% 0%, #f9fafe 0%, #fafafd 100%);
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   background: rgba(255, 255, 255, 0);
 }
 

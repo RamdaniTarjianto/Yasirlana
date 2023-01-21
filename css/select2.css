@@ -116,6 +116,13 @@ i:hover .content-tooltip {
     position: absolute;
     left: -440px;
     background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(-50%);
     z-index: 2;
   }
 }
@@ -127,12 +134,20 @@ i:hover .content-tooltip {
 
   .content-tooltip {
     position: absolute;
-    left: -340px;
+    left: -300px;
     background: #fff;
     z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(-50%);
   }
 }
 
+/* Samsung Galaxy S8+ */
 @media (min-width: 360px) and (min-height: 740px) {
   i {
     position: absolute;
@@ -143,6 +158,13 @@ i:hover .content-tooltip {
     left: -310px;
     background: #fff;
     z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(-50%);
   }
 }
 

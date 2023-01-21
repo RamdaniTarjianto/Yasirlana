@@ -93,21 +93,29 @@ i:hover .content-tooltip {
 }
 
 /* Responsive tooltip */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   i {
     position: absolute;
   }
   .content-tooltip {
     z-index: 2;
-    display: flex;
-    align-items: center;
     background: #fff;
     position: absolute;
+    left: -350px;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(-50%);
+    z-index: 2;
   }
-} */
+}
 
 /* Iphone Xr */
-@media (min-width: 414px) and (min-height: 896px) {
+/* @media (min-width: 414px) and (min-height: 896px) {
   i {
     position: absolute;
   }
@@ -125,9 +133,9 @@ i:hover .content-tooltip {
     transform: translateY(-50%);
     z-index: 2;
   }
-}
+} */
 
-@media (min-width: 390px) and (min-height: 844px) {
+/* @media (min-width: 390px) and (min-height: 844px) {
   i {
     position: absolute;
   }
@@ -145,10 +153,10 @@ i:hover .content-tooltip {
     transition: 0.5s;
     transform: translateY(-50%);
   }
-}
+} */
 
 /* Samsung Galaxy S8+ */
-@media (min-width: 360px) and (min-height: 740px) {
+/* @media (min-width: 360px) and (min-height: 740px) {
   i {
     position: absolute;
   }
@@ -166,9 +174,9 @@ i:hover .content-tooltip {
     transition: 0.5s;
     transform: translateY(-50%);
   }
-}
+} */
 
-@media (min-width: 400px) and (min-height: 846px) {
+/* @media (min-width: 400px) and (min-height: 846px) {
   i {
     position: absolute;
   }
@@ -186,7 +194,7 @@ i:hover .content-tooltip {
     transition: 0.5s;
     transform: translateY(-50%);
   }
-}
+} */
 
 /* Batas Responsive */
 

@@ -168,6 +168,26 @@ i:hover .content-tooltip {
   }
 }
 
+@media (min-width: 400px) and (min-height: 846px) {
+  i {
+    position: absolute;
+  }
+
+  .content-tooltip {
+    position: absolute;
+    left: -340px;
+    background: #fff;
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(-50%);
+  }
+}
+
 /* Batas Responsive */
 
 .select2-container .select2-selection--multiple,

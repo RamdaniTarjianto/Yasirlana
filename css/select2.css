@@ -1,9 +1,155 @@
-.select2-container--default .select2-search--dropdown .select2-search__field:focus {
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.select2-container--default
+  .select2-search--dropdown
+  .select2-search__field:focus {
   outline: none;
   box-shadow: none;
 }
 
-.select2-container .select2-selection--multiple, .select2-container .select2-selection--single {
+/* i {
+  position: relative;
+  display: inline-block;
+} */
+select {
+  flex: 1;
+}
+
+/* i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: 45px;
+  margin-left: 5px;
+}
+
+.content-tooltip {
+  position: absolute;
+  width: 400px;
+  bottom: -350px;
+  left: -400px;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(-50%);
+} */
+
+i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: 45px;
+  margin-left: 5px;
+}
+
+.content-tooltip {
+  position: absolute;
+  width: 400px;
+  bottom: -350px;
+  left: -400px;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.content-tooltip h6 p {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+}
+
+.content-tooltip p {
+  font-weight: normal;
+  line-height: 1.5;
+  font-size: 14px;
+  color: #333;
+  /* text-align: justify; */
+}
+
+.content-tooltip h6 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+i:hover .content-tooltip {
+  visibility: visible;
+  opacity: 1;
+  /* left: 100%; */
+  transform: translateY(-50%);
+}
+
+/* Responsive tooltip */
+/* @media (max-width: 768px) {
+  i {
+    position: absolute;
+  }
+  .content-tooltip {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    position: absolute;
+  }
+} */
+
+/* Iphone Xr */
+@media (min-width: 414px) and (min-height: 896px) {
+  i {
+    position: absolute;
+  }
+
+  .content-tooltip {
+    position: absolute;
+    left: -440px;
+    background: #fff;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 390px) and (min-height: 844px) {
+  i {
+    position: absolute;
+  }
+
+  .content-tooltip {
+    position: absolute;
+    left: -340px;
+    background: #fff;
+    z-index: 2;
+  }
+}
+
+@media (min-width: 360px) and (min-height: 740px) {
+  i {
+    position: absolute;
+  }
+
+  .content-tooltip {
+    position: absolute;
+    left: -310px;
+    background: #fff;
+    z-index: 2;
+  }
+}
+
+/* Batas Responsive */
+
+.select2-container .select2-selection--multiple,
+.select2-container .select2-selection--single {
   box-sizing: border-box;
   cursor: pointer;
   display: block;
@@ -25,7 +171,8 @@
   background-color: #fefeff;
   border-color: #02a974;
 }
-.select2-container.select2-container--focus .select2-selection--multiple, .select2-container.select2-container--focus .select2-selection--single {
+.select2-container.select2-container--focus .select2-selection--multiple,
+.select2-container.select2-container--focus .select2-selection--single {
   background-color: #fefeff;
   border-color: #02a974;
 }
@@ -42,37 +189,53 @@
   padding: 7px;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
   min-height: 42px;
   line-height: 42px;
   padding-left: 20px;
   padding-right: 20px;
 }
-.select2-container--default .select2-selection--multiple .select2-selection__arrow, .select2-container--default .select2-selection--single .select2-selection__arrow {
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__arrow,
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
   position: absolute;
   top: 1px;
   right: 1px;
   width: 40px;
   min-height: 42px;
 }
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
   color: #fff;
   padding-left: 10px;
   padding-right: 10px;
 }
-.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__rendered {
   padding-left: 10px;
   padding-right: 10px;
 }
-.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice__remove {
   margin-right: 5px;
   color: #fff;
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice,
-.select2-container--default .select2-results__option[aria-selected=true],
-.select2-container--default .select2-results__option--highlighted[aria-selected] {
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice,
+.select2-container--default .select2-results__option[aria-selected="true"],
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected] {
   background-color: #02a974;
   color: #fff;
 }

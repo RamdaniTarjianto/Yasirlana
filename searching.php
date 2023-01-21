@@ -105,12 +105,36 @@ set_time_limit(10000);
                                         <option>AI - TMJ</option>
                                         <option>AI - ECD</option>
                                     </select>
+                                    <i class="fas fa-info-circle">
+                                        <div class="content-tooltip">
+                                            <h6>
+                                                AI - TMJ
+                                            </h6>
+                                            <p>
+                                                Model deep learning ini digunakan untuk mengklasifikasikan dokumen yang berhubungan dengan Temporomandibular Joint (TMJ)
+                                            </p>
+                                            <br>
+
+                                            <h6>
+                                                AI - ECD
+                                            </h6>
+                                            <p>
+                                                Model deep learning ini digunakan untuk mengklasifikasikan dokumen yang berhubungan terkait Edentulous dengan penyakit Komorbid (ECD)
+                                            </p>
+
+                                        </div>
+
+
+                                    </i>
                                 </div>
+
 
                                 <!-- <button name="export" id="export" class="btn btn-success float-right"
                                     onclick="submitForm('excel.php')"> <i class="fa fa-file"></i> Export
                                     Data</button> -->
                             </div>
+
+
                             <div class="form-group col-md-5">
                                 <label class="display-4" style="font-size: 15px;">Publication Year</label>
                                 <div class="input-group input-daterange">

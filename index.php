@@ -250,7 +250,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">drg. Chaerita Maulani, Sp.Perio</a></h3>
-                                    <p>Kepala Prodi Akademik Kedokteran Gigi</p>
+                                    <p>Head of the Academic Program of Dentistry</p>
                                 </div>
                             </div>
                         </div>
@@ -273,7 +273,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">drg. Liana Zulfa, Sp.Perio., MARS.</a></h3>
-                                    <p>Direktur RSGM YARSI</p>
+                                    <p>Director of RSGM YARSI</p>
                                 </div>
                             </div>
                         </div>
@@ -296,7 +296,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">drg. Dharma Satya Aprianto, Sp.Pros</a></h3>
-                                    <p>Kepala Prodi Profesi Kedokteran Gigi</p>
+                                    <p>Head of the Dentistry Profession Program</p>
                                 </div>
                             </div>
                         </div>
@@ -319,7 +319,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">Chandra Prasetyo Utomo, S.Kom., M.Sc.</a></h3>
-                                    <p>Kepala Pusat Penelitian e-Health</p>
+                                    <p>Head of e-Health Research Center</p>
                                 </div>
                             </div>
                         </div>
@@ -342,7 +342,7 @@
                                 </div>
                                 <div class="team-info">
                                     <h3><a href="#">Muhammad Fathurachman, S.Kom, M.Kom.</a></h3>
-                                    <p>Sekertaris Pogram Studi TI</p>
+                                    <p>Secretary of Information Technology Program</p>
                                 </div>
                             </div>
                         </div>
@@ -549,7 +549,7 @@
                                     </li>
 
                                     <li>
-                                        <i class="icon fas fa-envelope"></i> yasirlana@gmail.com
+                                        <i class="icon fas fa-envelope"></i> yasirlana.yarsi@gmail.com
                                     </li>
 
                                     <li>

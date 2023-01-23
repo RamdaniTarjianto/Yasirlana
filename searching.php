@@ -195,7 +195,7 @@ set_time_limit(10000);
                     <!-- </div> -->
 
                     <button id="dropdownMenuLink" class="btn btn-secondary float-right dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" disabled="disabled">
-                        <i class="fa fa-file"></i>
+<!--                         <i class="fa fa-file"></i> -->
                         Export Data</button>
 
                     </form>

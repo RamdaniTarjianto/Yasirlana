@@ -51,7 +51,7 @@ set_time_limit(10000);
                 <form action="" method="get" id="form1">
                     <input type="hidden" name="page" value="1">
                     <div class="p-4 mt-3">
-                        <h3 class="heading mt-5 text-center">Hi! Search Your Rearch Paper Here</h3>
+                        <h3 class="heading mt-5 text-center">Hi! Search Your Paper Here</h3>
                         <div class="d-flex justify-content-center px-4">
                             <div class="search">
                                 <input type="text" id="search" class="search-input fa fa-search" placeholder="Type Keyword (e.g TMJ)..." name="research_name">
@@ -104,6 +104,7 @@ set_time_limit(10000);
                                         <option selected="selected" disabled="disabled" value=""></option>
                                         <option>AI - TMJ</option>
                                         <option>AI - ECD</option>
+                                        <option>AI - TMD</option>
                                     </select>
                                     <i class="fas fa-info-circle">
                                         <div class="content-tooltip">

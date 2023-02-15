@@ -157,8 +157,24 @@ if (isset($_GET['submit'])) {
                     ));
                     $response = curl_exec($curl);
                     $err = curl_error($curl);
-                }else{
+                }else if($model == "AI - ECD"){
                     $query = "https://slr-komorbid-hzouxonooq-uc.a.run.app/predict?text=$txt";
+                    $curl = curl_init();
+                    curl_setopt_array($curl, array(
+                        CURLOPT_URL => $query,
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_TIMEOUT => 30,
+                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST => "POST",
+                        CURLOPT_HTTPHEADER => array(
+                            "Content-Length: 0"
+                        ),
+                    ));
+                    $response = curl_exec($curl);
+                    $err = curl_error($curl);
+                }
+                else{
+                    $query = "https://slr-tmd-hzouxonooq-uc.a.run.app/predict?text=$txt";
                     $curl = curl_init();
                     curl_setopt_array($curl, array(
                         CURLOPT_URL => $query,

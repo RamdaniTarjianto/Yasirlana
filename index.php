@@ -258,7 +258,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/dharma.png" alt="">
+                                    <img src="assets/img/gallery/blank.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -304,7 +304,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/chandra.png" alt="">
+                                    <img src="assets\img\gallery\chandra.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -419,7 +419,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/dharma.png" alt="">
+                                    <img src="assets/img/gallery/blank.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -442,7 +442,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/dharma.png" alt="">
+                                    <img src="assets/img/gallery/blank.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">
@@ -465,7 +465,7 @@
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="single-team mb-30 text-center">
                                 <div class="team-img">
-                                    <img src="assets/img/gallery/dharma.png" alt="">
+                                    <img src="assets/img/gallery/blank.png" alt="">
                                     <div class="team-caption">
 
                                         <div class="team-social">

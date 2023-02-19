@@ -128,7 +128,7 @@
                     </div> -->
 
                     <div class="right-column text-center d-flex justify-content-lg-end justify-content-center position-relative top-10 ml-auto pe-0">
-                        <img id="img-fluid" class="h-auto mw-100" src="images/Yasirlana.svg" alt="" />
+                        <img id="img-fluid" class="h-auto mw-100" src="images/GIF_Yasirlana.gif" alt="" />
                     </div>
 
                 </div>

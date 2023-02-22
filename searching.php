@@ -85,11 +85,11 @@ set_time_limit(10000);
                                 <div class="form-group">
                                     <label class="display-4" style="font-size: 15px;">Select Result</label>
                                     <div class="btn-group" data-toggle="buttons" id="resultform">
-                                        <label class="btn btn-light d-flex mt-1 form-control-lg" title="Jika kamu memilih label ini, maka akan menghasilkan paper-paper dengan hasil 'Included' sesuai dengan keyword kamu." style="background-color: white;">
+                                        <label class="btn btn-light d-flex mt-1 form-control-lg" title="If you choose this label, it will result in papers with 'Included' outcomes according to your keywords." style="background-color: white;">
                                             <input type="checkbox" style="margin-right: 10px;" id="included" name="result[]" value="Included" autocomplete="off">
                                             <label class="ml-auto my-auto">Included</label>
                                         </label>
-                                        <label class="btn btn-light d-flex mt-1 form-control-lg" title="Jika kamu memilih label ini, maka akan menghasilkan paper-paper dengan hasil 'Excluded' sesuai dengan keyword kamu." style="background-color: white;">
+                                        <label class="btn btn-light d-flex mt-1 form-control-lg" title="If you choose this label, it will result in papers with 'Excluded' outcomes according to your keywords." style="background-color: white;">
                                             <input type="checkbox" style="margin-right: 10px;" id="excluded" name="result[]" value="Excluded" autocomplete="off">
                                             <label class="ml-auto my-auto">Excluded</label>
                                         </label>
@@ -112,7 +112,7 @@ set_time_limit(10000);
                                                 AI - TMJ
                                             </h6>
                                             <p>
-                                                Model deep learning ini digunakan untuk mengklasifikasikan dokumen yang berhubungan dengan Temporomandibular Joint (TMJ)
+                                                 This artificial intelligence model is used to classify documents related to Temporomandibular Joint (TMJ).
                                             </p>
                                             <br>
 
@@ -120,8 +120,18 @@ set_time_limit(10000);
                                                 AI - ECD
                                             </h6>
                                             <p>
-                                                Model deep learning ini digunakan untuk mengklasifikasikan dokumen yang berhubungan terkait Edentulous dengan penyakit Komorbid (ECD)
+                                                This artificial intelligence model is used to classify documents related to Edentulous with Comorbid Disease (ECD).
                                             </p>
+                                            
+                                            <br>
+
+                                            <h6>
+                                                AI - TMD
+                                            </h6>
+                                            <p>
+                                                This artificial intelligence model is used to classify documents related to Temporo Mandibular Disorder (TMD)
+                                            </p>
+                                            <br>
 
                                         </div>
 

@@ -50,7 +50,7 @@ i {
   position: absolute;
   width: 400px;
   bottom: -350px;
-  left: -400px;
+  right: -400px;
   background: #fff;
   padding: 20px;
   box-sizing: border-box;
